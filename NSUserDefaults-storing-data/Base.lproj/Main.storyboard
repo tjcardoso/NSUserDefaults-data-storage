@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSUserDefaults_storing_data" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa7-bh-a7h">
+                                <rect key="frame" x="200.5" y="170" width="200" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.38888640699999999" blue="0.36405163509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Dut-Rr-GU0"/>
+                                    <constraint firstAttribute="height" constant="54" id="rgX-kh-0rD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="red:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Wb-P0-k0a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhT-CG-0s1">
+                                <rect key="frame" x="200" y="266" width="200" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="U0u-AC-Vz7"/>
+                                    <constraint firstAttribute="height" constant="50" id="xbE-x3-NPH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="yellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nrd-oE-yIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-cU-ltM">
+                                <rect key="frame" x="200" y="358" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.40895838420000002" green="0.63035616930000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4z7-cw-rkV"/>
+                                    <constraint firstAttribute="width" constant="200" id="Eaa-5F-28e"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="blue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qny-kr-4it"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Color: Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cv-GP-C5w">
+                                <rect key="frame" x="-702.5" y="45" width="2005.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2005" id="i6l-nY-L25"/>
+                                    <constraint firstAttribute="height" constant="31" id="qP9-RG-Nxp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qa7-bh-a7h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="G3p-bD-GR9"/>
+                            <constraint firstItem="LhT-CG-0s1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HIf-k7-mpY"/>
+                            <constraint firstItem="XX1-cU-ltM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBh-R0-KDu"/>
+                            <constraint firstItem="3Cv-GP-C5w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="jAy-Yb-3ZT"/>
+                            <constraint firstItem="qa7-bh-a7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mbU-76-ALq"/>
+                            <constraint firstItem="3Cv-GP-C5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uRj-5C-Sb5"/>
+                            <constraint firstItem="LhT-CG-0s1" firstAttribute="top" secondItem="qa7-bh-a7h" secondAttribute="bottom" constant="42" id="vtY-CG-jeF"/>
+                            <constraint firstItem="XX1-cU-ltM" firstAttribute="top" secondItem="LhT-CG-0s1" secondAttribute="bottom" constant="42" id="xeW-tL-ksV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favLabel" destination="3Cv-GP-C5w" id="09w-0Y-T6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="313"/>
         </scene>
     </scenes>
 </document>
